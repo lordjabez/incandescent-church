@@ -1,0 +1,311 @@
+/* The Church of the Incandescent Filaments.
+   Colors and fonts come from tokens.css (the Style of the Faith); this file is layout only. */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+h1, h2, h3 { font-family: var(--font-accent); font-weight: 500; line-height: 1.15; margin: 0; }
+h2 { font-size: clamp(2rem, 5vw, 2.75rem); }
+h3 { font-size: 1.5rem; }
+p { margin: 0 0 1em; }
+a { color: var(--color-accent-text); }
+img { max-width: 100%; height: auto; display: block; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: var(--color-dark-page);
+  color: var(--color-dark-text);
+  padding: 0 1.25rem 4.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .25rem 1.75rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.25rem 0;
+  font-size: .8125rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.nav a { color: var(--color-dark-text); text-decoration: none; padding: .35rem 0; border-bottom: 1px solid transparent; }
+.nav a:hover { border-bottom-color: var(--color-dark-accent); }
+
+.hero-body {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: 3.5rem;
+  align-items: start;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.lamp { position: relative; }
+.lamp::before {
+  content: "";
+  position: absolute;
+  inset: 20% -45% -25%;
+  background: radial-gradient(closest-side, rgb(254 197 0 / .3), rgb(254 197 0 / .08) 55%, transparent);
+  pointer-events: none;
+}
+.bulb { position: relative; display: block; width: 100%; height: auto; }
+.bulb .cord { stroke: var(--warm-white-light); stroke-width: 2; opacity: .6; }
+.bulb .socket { fill: var(--illuminated-brass); }
+.bulb .thread { stroke: var(--longest-night); stroke-width: 1.5; opacity: .5; fill: none; }
+.bulb .glass { fill: url(#glass); stroke: var(--warm-white-light); stroke-width: 1.5; stroke-opacity: .55; }
+.bulb .stem { stroke: var(--warm-white-light); stroke-width: 1.2; opacity: .5; fill: none; }
+.bulb .filaments path {
+  fill: none;
+  stroke: var(--filament-amber);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  animation: flicker 7s infinite;
+}
+.bulb .filaments path:nth-child(2) { animation-delay: -1.9s; animation-duration: 9s; }
+.bulb .filaments path:nth-child(3) { animation-delay: -4.3s; animation-duration: 11s; }
+.bulb .filaments path:nth-child(4) { animation-delay: -2.7s; animation-duration: 8s; }
+.bulb .filaments path:nth-child(5) { animation-delay: -5.5s; animation-duration: 10s; }
+@keyframes flicker {
+  0%, 91%, 95%, 100% { opacity: 1; }
+  93% { opacity: .55; }
+}
+
+.chain {
+  position: absolute;
+  top: 26%;
+  right: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 .5rem .25rem;
+  background: none;
+  border: 0;
+  color: var(--color-dark-text);
+  font: inherit;
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+.chain:active { transform: translateY(8px); }
+.chain-line { height: 5.5rem; border-left: 2px dotted var(--illuminated-brass); }
+.chain-bead { width: .8rem; height: .8rem; border-radius: 50%; background: var(--illuminated-brass); }
+.chain-label { margin-top: .3rem; font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase; opacity: .75; }
+
+.hero-text { padding-top: 3.5rem; }
+.eyebrow { margin: 0 0 .5rem; font-size: .8125rem; letter-spacing: .3em; text-transform: uppercase; color: var(--color-dark-accent); }
+h1 { font-size: clamp(2.75rem, 7.5vw, 4.75rem); letter-spacing: -.01em; }
+.subtitle { margin: 1.5rem 0 1.75rem; max-width: 34rem; font-family: var(--font-accent); font-style: italic; font-size: 1.3125rem; line-height: 1.45; }
+.tenets { list-style: none; margin: 0 0 2rem; padding: 0 0 0 1.1rem; border-left: 3px solid var(--color-dark-accent); font-weight: 500; }
+
+.button {
+  display: inline-block;
+  padding: .6rem 1.25rem;
+  background: var(--color-accent);
+  border: 1.5px solid var(--color-accent);
+  border-radius: 2px;
+  color: var(--mr-tux-black);
+  font-size: .875rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.button:hover { background: var(--cremant-gold); border-color: var(--cremant-gold); }
+.button-quiet { background: transparent; border-color: currentColor; color: inherit; }
+.button-quiet:hover { background: transparent; border-color: var(--color-accent); }
+
+/* ---------- Sections ---------- */
+
+.section { max-width: 64rem; margin: 0 auto; padding: 5rem 1.25rem; }
+.section-dark, .section-tint { max-width: none; }
+.section-inner { max-width: 61.5rem; margin: 0 auto; }
+.section-dark { background: var(--color-dark-page); color: var(--color-dark-text); }
+.section-tint { background: var(--color-surface); border-block: 1px solid var(--candlelight); }
+.section-intro { max-width: 40rem; margin: 1rem 0 2.5rem; font-size: 1.125rem; color: var(--color-text-muted); }
+.section-dark .section-intro { color: inherit; }
+.aside { max-width: 40rem; margin: 2.5rem 0 0; font-size: .9375rem; color: var(--color-text-muted); }
+.section-dark .aside { color: inherit; opacity: .85; }
+
+.preamble { max-width: 44rem; padding-bottom: 1rem; }
+.kicker { margin-bottom: 1.25rem; font-family: var(--font-body); font-size: .8125rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-text); }
+.lede { font-family: var(--font-accent); font-size: clamp(1.5rem, 3.6vw, 2rem); line-height: 1.3; }
+
+/* ---------- Filaments ---------- */
+
+.filament-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 1.25rem; }
+.filament {
+  position: relative;
+  padding: 1.75rem 1.5rem 1.5rem;
+  background: var(--color-surface);
+  border-top: 4px solid var(--color-accent);
+  box-shadow: 0 1px 2px rgb(100 76 49 / .12), 0 8px 24px rgb(100 76 49 / .08);
+}
+.filament p { margin: .75rem 0 0; font-size: .9688rem; }
+.numeral { display: block; margin-bottom: .5rem; font-family: var(--font-accent); font-size: 1.125rem; letter-spacing: .12em; color: var(--color-accent-text); }
+.filament-secret { background: var(--color-dark-page); border-top-color: var(--vestment-navy); color: var(--color-dark-text); }
+.filament-secret .numeral { color: var(--color-dark-accent); }
+.filament-secret p { font-family: var(--font-accent); font-style: italic; font-size: 1.1875rem; }
+
+/* ---------- Test of the room ---------- */
+
+.room-test { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 2.5rem; align-items: center; }
+.room-test fieldset { margin: 0; padding: 0; border: 0; }
+.room-test legend { padding: 0; margin-bottom: 1rem; font-size: .8125rem; letter-spacing: .14em; text-transform: uppercase; color: var(--color-dark-accent); }
+.room-test label { display: flex; gap: .9rem; align-items: flex-start; padding: .8rem 0; border-top: 1px solid rgb(255 245 209 / .22); cursor: pointer; }
+.room-test input { flex: none; width: 1.2rem; height: 1.2rem; margin: .25rem 0 0; accent-color: var(--filament-amber); }
+.room-test b { display: inline-block; min-width: 1.9rem; font-family: var(--font-accent); font-weight: 500; color: var(--color-dark-accent); }
+.verdict { padding: 1.75rem; border: 1px solid rgb(255 245 209 / .3); transition: background .4s, color .4s, box-shadow .4s; }
+.verdict-count { margin: 0 0 .5rem; font-size: .8125rem; letter-spacing: .14em; text-transform: uppercase; color: var(--color-dark-accent); }
+.verdict-text { margin: 0; font-family: var(--font-accent); font-size: 1.4375rem; line-height: 1.35; }
+.all-lit .verdict { background: var(--warm-white-light); color: var(--mr-tux-black); border-color: var(--filament-amber); box-shadow: 0 0 60px rgb(254 197 0 / .45); }
+.all-lit .verdict-count { color: var(--library-oak); }
+
+/* ---------- The Way and occasions ---------- */
+
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin: 0; }
+.meta { font-size: .8125rem; color: var(--color-text-muted); }
+
+.way, .occasions { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 2.75rem 2.5rem; }
+.way article, .occasions article { padding-top: 1.25rem; border-top: 1px solid var(--color-rule); }
+.way h3 .numeral { display: inline-block; min-width: 2.4rem; margin: 0; }
+.way p, .occasions article > p:not(.aside) { margin: .75rem 0 0; font-size: .9688rem; }
+.way ul { margin: 1rem 0 0; padding-left: 1.1rem; font-size: .9375rem; color: var(--color-text-muted); }
+.way li { margin-bottom: .5rem; padding-left: .2rem; }
+.way li::marker { color: var(--illuminated-brass); }
+.mantras { list-style: none; margin: 1.25rem 0 0; padding: 0 0 0 1.1rem; border-left: 3px solid var(--color-accent); font-family: var(--font-accent); font-size: 1.3125rem; line-height: 1.3; }
+.mantras li { margin-bottom: .45rem; }
+.occasions .aside { margin-top: 1.25rem; }
+
+/* ---------- Proverbs and rite ---------- */
+
+.proverbs { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 2.25rem 3rem; margin-top: 2.5rem; }
+.proverbs figure { margin: 0; padding-left: 1.25rem; border-left: 3px solid var(--color-accent); }
+.proverbs blockquote { margin: 0; font-family: var(--font-accent); font-size: 1.5rem; line-height: 1.3; }
+.proverbs figcaption { margin-top: .6rem; font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-muted); }
+
+.rite { margin-top: 4rem; padding: 2rem; background: var(--color-page); }
+.rite > p { margin: .75rem 0 0; }
+.rite ol { margin: 1.25rem 0 0; padding-left: 1.5rem; font-family: var(--font-accent); font-size: 1.3125rem; line-height: 1.4; list-style-type: upper-roman; }
+.rite li { padding-left: .5rem; margin-bottom: .4rem; }
+.rite li::marker { font-size: 1rem; color: var(--color-accent-text); }
+.rite .aside { margin-top: 1.25rem; }
+
+/* ---------- Calendar ---------- */
+
+.calendar { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-rule); }
+.calendar li { display: grid; grid-template-columns: 15rem minmax(0, 1fr); column-gap: 2rem; padding: 1.4rem 1rem; border-bottom: 1px solid var(--color-rule); }
+.calendar .when { grid-row: span 2; margin: .3rem 0 0; font-size: .8125rem; letter-spacing: .1em; text-transform: uppercase; color: var(--color-accent-text); }
+.calendar li > p:last-child { margin: .4rem 0 0; font-size: .9688rem; color: var(--color-text-muted); }
+.calendar .next { background: var(--warm-white-light); box-shadow: inset 4px 0 0 var(--color-accent); }
+.badge { display: inline-block; margin-top: .4rem; padding: .1rem .5rem; background: var(--color-accent); color: var(--mr-tux-black); font-size: .6875rem; font-weight: 600; letter-spacing: .08em; white-space: nowrap; }
+
+/* ---------- Style of the Faith ---------- */
+
+.type-specimens { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem; }
+.specimen { padding: 1.5rem; background: var(--color-page); }
+.specimen p { margin: 0; }
+.specimen-name { font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--color-accent-text); }
+.specimen-sample { margin: .5rem 0 .25rem; font-size: 2.25rem; line-height: 1.2; }
+.specimen-nums { font-size: 1.25rem; }
+.specimen-serif .specimen-sample, .specimen-serif .specimen-nums { font-family: var(--font-accent); }
+.specimen-sans .specimen-sample { font-weight: 300; font-size: 2rem; }
+.specimen .specimen-role { margin-top: .75rem; font-size: .875rem; color: var(--color-text-muted); }
+
+.palette { display: grid; grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr)); gap: 1.5rem 1rem; margin-bottom: 2.5rem; }
+.family h3 { margin-bottom: .5rem; font-family: var(--font-body); font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--color-text-muted); }
+.family ul { list-style: none; margin: 0; padding: 0; border: 1px solid var(--millennial-grey); }
+.family li { display: flex; flex-direction: column; padding: .55rem .7rem; font-size: .8125rem; line-height: 1.3; }
+.swatch-name { font-weight: 500; }
+.swatch-hex { font-size: .6875rem; letter-spacing: .06em; opacity: .8; }
+
+/* ---------- Footer ---------- */
+
+.footer { padding: 5rem 1.25rem 3rem; background: var(--color-dark-page); color: var(--color-dark-text); text-align: center; }
+.benediction { font-family: var(--font-accent); font-size: 1.375rem; line-height: 1.5; }
+.benediction .amen { margin-top: 1.75rem; font-style: italic; font-size: 2rem; color: var(--color-dark-accent); }
+.colophon { margin: 2.5rem 0 0; font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; opacity: .8; }
+.colophon + .colophon { margin-top: .75rem; }
+.linklike { padding: 0; background: none; border: 0; border-bottom: 1px dotted currentColor; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
+
+/* ---------- Fluorescent panels: the wrong room, rendered faithfully ---------- */
+
+.panel-notice {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem 1rem;
+  padding: .6rem 1rem;
+  background: var(--pure-white);
+  border-bottom: 1px solid var(--millennial-grey);
+  color: var(--pure-black);
+  font-size: .875rem;
+}
+.panel-notice[hidden] { display: none; }
+.panel-notice p { margin: 0; }
+.panel-notice button { padding: .35rem .9rem; background: var(--filament-amber); border: 0; color: var(--mr-tux-black); font: inherit; font-weight: 600; cursor: pointer; }
+
+.fluorescent {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Arial, Helvetica, sans-serif;
+  --color-page: var(--flake-salt-white);
+  --color-surface: var(--pure-white);
+  --color-text: var(--pure-black);
+  --color-text-muted: var(--lamplighters-charcoal);
+  --color-accent: var(--millennial-grey);
+  --color-accent-text: var(--lamplighters-charcoal);
+  --color-dark-page: var(--millennial-grey);
+  --color-dark-text: var(--pure-black);
+  --color-dark-accent: var(--pure-black);
+  --candlelight: var(--millennial-grey);
+  --warm-white-light: var(--pure-white);
+  --cremant-gold: var(--flake-salt-white);
+}
+.fluorescent * { box-shadow: none !important; font-style: normal !important; }
+.fluorescent .button { border-color: var(--pure-black); }
+.fluorescent .lamp::before { display: none; }
+.fluorescent .bulb .filaments { filter: none; }
+.fluorescent .bulb .filaments path { stroke: var(--threshold-cobblestone); animation: none; }
+.fluorescent .bulb .glass { fill: none; stroke: var(--pure-black); }
+.fluorescent .bulb .cord, .fluorescent .bulb .stem { stroke: var(--pure-black); }
+.fluorescent .bulb .socket, .fluorescent .chain-bead { fill: var(--threshold-cobblestone); background: var(--threshold-cobblestone); }
+.fluorescent .chain-line { border-color: var(--threshold-cobblestone); }
+.fluorescent .room-test label, .fluorescent .verdict { border-color: var(--threshold-cobblestone); }
+.fluorescent .filament-secret { border-top-color: var(--threshold-cobblestone); }
+.fluorescent .family ul { filter: grayscale(1); }
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 46rem) {
+  .hero-body { grid-template-columns: 1fr; gap: 0; }
+  .lamp { width: 9.5rem; margin: 0 auto; }
+  .hero-text { padding-top: 1.5rem; }
+  .section { padding: 3.5rem 1.25rem; }
+  .room-test { grid-template-columns: 1fr; gap: 1.75rem; }
+  .calendar li { grid-template-columns: 1fr; padding-inline: .75rem; }
+  .calendar .when { grid-row: auto; margin: 0 0 .3rem; }
+  .filament-list, .proverbs, .way, .occasions { grid-template-columns: 1fr; }
+  .palette { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .bulb .filaments path { animation: none; }
+  .chain, .verdict { transition: none; }
+}

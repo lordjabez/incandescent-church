@@ -1,0 +1,95 @@
+/*
+ * Style of the Faith: design tokens for the Church of the Incandescent Filaments.
+ * Paste into a <style> block, or link it. Values mirror palette.md.
+ *
+ * Fonts (Google Fonts):
+ * <link rel="preconnect" href="https://fonts.googleapis.com">
+ * <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ * <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Franklin:ital,wght@0,300..700;1,300..700&display=swap">
+ *
+ * For WeasyPrint, install the fonts locally instead; it does not need the link.
+ */
+
+:root {
+  /* Type */
+  --font-sans: "Libre Franklin", "Franklin Gothic", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "EB Garamond", Garamond, "Times New Roman", serif;
+  --font-body: var(--font-sans);    /* nearly everything */
+  --font-accent: var(--font-serif); /* headings and sparing emphasis */
+
+  /* Neutrals, light to dark */
+  --pure-white: #ffffff;
+  --flake-salt-white: #ececec;
+  --millennial-grey: #cccccc;
+  --threshold-cobblestone: #808285;
+  --lamplighters-charcoal: #4a4a4a;
+  --mr-tux-black: #1f1f1f;
+  --pure-black: #000000;
+
+  /* Papers */
+  --antiquities-alabaster: #fffefa;
+  --museum-ivory: #fffdf3;
+  --parchment-crease: #f4efe6;
+  --warm-white-light: #fff5d1;
+
+  /* Brown */
+  --unread-pages: #f7efe8;
+  --second-cup-crema: #c49a6c;
+  --camel-cashmere-coat: #a67c52;
+  --library-oak: #644c31;
+
+  /* Red */
+  --unapologetic-blush: #faeded;
+  --plaster-cast-rose: #dca8a3;
+  --hearthstone: #be645a;
+  --speakeasy-crimson: #8e0a26;
+
+  /* Orange */
+  --ginger-ale: #fce4d6;
+  --the-giant-peach: #f4b084;
+  --soul-ginger: #e27d60;
+  --radiator-rust: #b85c38;
+
+  /* Gold */
+  --candlelight: #f2e0b6;
+  --cremant-gold: #ffe37d;
+  --filament-amber: #fec500;
+  --illuminated-brass: #bd8d23;
+
+  /* Green */
+  --overwatered-mint: #eaf4ec;
+  --south-facing-fern: #a8cdb1;
+  --rosemary-garnish: #67a776;
+  --well-watered-plant: #397249;
+
+  /* Teal */
+  --faded-verdigris: #cde5e1;
+  --absinthe-coupe: #4a7c7b;
+  --patinaed-filament: #3e6b6a;
+  --college-ivy-vine: #345c5a;
+
+  /* Blue */
+  --first-light: #e6eef5;
+  --museum-porcelain: #91b2d5;
+  --vestment-navy: #335384;
+  --longest-night: #003271;
+
+  /* Purple */
+  --cold-ash-lavender: #f6edf7;
+  --hour-before-dusk: #b49cb6;
+  --dusk-violet: #724b75;
+  --shadow-plum: #593d5c;
+
+  /* Roles: use these in layouts, the named swatches for accents and data */
+  --color-page: var(--parchment-crease);
+  --color-surface: var(--antiquities-alabaster);
+  --color-text: var(--mr-tux-black);
+  --color-text-muted: var(--lamplighters-charcoal);
+  --color-rule: var(--threshold-cobblestone);
+  --color-accent: var(--filament-amber);
+  --color-accent-text: var(--library-oak);
+  --color-emphasis: var(--speakeasy-crimson);
+  --color-dark-page: var(--longest-night);
+  --color-dark-text: var(--warm-white-light);
+  --color-dark-accent: var(--filament-amber);
+}

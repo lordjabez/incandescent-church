@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Church of the Incandescent Filaments</title>
+<meta name="description" content="A modest catechism for reasonable householders. Cats are required. Champagne is encouraged. Edison bulbs are non-negotiable.">
+<meta property="og:title" content="The Church of the Incandescent Filaments">
+<meta property="og:description" content="A modest catechism for reasonable householders. Cats are required. Champagne is encouraged. Edison bulbs are non-negotiable.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://incandescent.church/">
+<meta name="theme-color" content="#003271">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Libre+Franklin:ital,wght@0,300..700;1,300..700&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="panel-notice" role="status" hidden>
+  <p>You are now under fluorescent panels. The faith does not seek dialogue with the fluorescent panel.</p>
+  <button type="button" class="js-light">Replace the bulb</button>
+</div>
+
+<header class="hero">
+  <nav class="nav" aria-label="Sections">
+    <a href="#filaments">The Five Filaments</a>
+    <a href="#way">The Way</a>
+    <a href="#room">The Test of the Room</a>
+    <a href="#calendar">The Calendar</a>
+    <a href="#style">The Style</a>
+  </nav>
+
+  <div class="hero-body">
+    <div class="lamp">
+      <svg class="bulb" viewBox="0 0 200 270" role="img" aria-label="An Edison bulb with five lit filaments">
+        <defs>
+          <radialGradient id="glass" cx="50%" cy="62%" r="55%">
+            <stop offset="0" stop-color="#FEC500" stop-opacity=".34"/>
+            <stop offset=".6" stop-color="#FEC500" stop-opacity=".1"/>
+            <stop offset="1" stop-color="#FEC500" stop-opacity=".03"/>
+          </radialGradient>
+          <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="3.5" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <line class="cord" x1="100" y1="0" x2="100" y2="40"/>
+        <rect class="socket" x="82" y="38" width="36" height="36" rx="4"/>
+        <path class="thread" d="M82 48h36M82 56h36M82 64h36"/>
+        <path class="glass" d="M84 74C84 100 40 130 40 185c0 40 28 70 60 70s60-30 60-70c0-55-44-85-44-111Z"/>
+        <path class="stem" d="M93 74 76 150M107 74l17 76"/>
+        <g class="filaments" filter="url(#glow)">
+          <path d="M76 150q4.800 66 9.600 0"/>
+          <path d="M85.600 150q4.800 66 9.600 0"/>
+          <path d="M95.200 150q4.800 66 9.600 0"/>
+          <path d="M104.800 150q4.800 66 9.600 0"/>
+          <path d="M114.400 150q4.800 66 9.600 0"/>
+        </g>
+      </svg>
+      <button type="button" class="chain js-light" aria-label="Pull the chain to change the light">
+        <span class="chain-line" aria-hidden="true"></span>
+        <span class="chain-bead" aria-hidden="true"></span>
+        <span class="chain-label">pull</span>
+      </button>
+    </div>
+
+    <div class="hero-text">
+      <p class="eyebrow">The Church of the</p>
+      <h1>Incandescent Filaments</h1>
+      <p class="subtitle">A modest catechism for reasonable householders, earnest enough to be slightly ridiculous, in which five filaments are established by no authority other than their own self-evidence, with a sixth secret filament known only to the cats.</p>
+      <ul class="tenets">
+        <li>Cats are required.</li>
+        <li>Champagne is encouraged.</li>
+        <li>Edison bulbs are non-negotiable.</li>
+      </ul>
+      <p class="actions">
+        <a class="button" href="#way">Learn the Way</a>
+        <a class="button button-quiet" href="#filaments">Meet the filaments</a>
+      </p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="section preamble" aria-labelledby="preamble-h">
+  <h2 id="preamble-h" class="kicker">A brief word, in which several things are conceded at once</h2>
+  <p class="lede">This is not a serious religion, except where it is, and the difficulty for the visitor will be that the faith has not always succeeded in keeping the two registers distinct.</p>
+  <p>The faith was first written down on a deep burgundy couch, by two friends whose conversation was supposed to be about work and did not survive the second cocktail. It is far older than that evening, and had merely been waiting for a couch and some cocktails to bring about codification.</p>
+  <p>It does not, on inspection, require belief. Several of the things it asks one to believe are unfortunately true regardless.</p>
+</section>
+
+<section class="section" id="filaments" aria-labelledby="filaments-h">
+  <h2 id="filaments-h">The Five Filaments</h2>
+  <p class="section-intro">These five are not supports. Nothing rests on them. They are filaments: independent, irreducible, and lit. The faith is what fills the room when all five are glowing.</p>
+
+  <ol class="filament-list">
+    <li class="filament">
+      <span class="numeral" aria-hidden="true">I</span>
+      <h3>The Sovereignty of Cats</h3>
+      <p>That there exists a creature who has never once in its history felt the need to apologize for taking up space, and that this creature has, at moments and on terms wholly its own, elected to take up space upon us. The decision is a sacrament. The reversal of the decision is also a sacrament, and is, in the long view, the more instructive of the two.</p>
+    </li>
+    <li class="filament">
+      <span class="numeral" aria-hidden="true">II</span>
+      <h3>The Effervescent Spirit</h3>
+      <p>That bubbles rising in a glass constitute a small and repeatable miracle; that to share them is to render the miracle communal and therefore real; and that any faith which permits drinking alone in moderation is a faith with insufficient hospitality and very likely the wrong friends.</p>
+    </li>
+    <li class="filament">
+      <span class="numeral" aria-hidden="true">III</span>
+      <h3>The Sanctity of the Threshold</h3>
+      <p>That where one waits matters at least as much as what one waits for; that the faithful invest in better thresholds rather than enduring worse ones; and that no membership purchased to escape an inferior gate has ever, in retrospect, been regretted, while several memberships not purchased have, very much, been.</p>
+    </li>
+    <li class="filament">
+      <span class="numeral" aria-hidden="true">IV</span>
+      <h3>The Unmaking of Patriarchy</h3>
+      <p>That hierarchies built on dominance are not natural laws but inherited furniture; that the furniture can be moved, and is in fact moved with surprising regularity once one stops asking permission; and that the present arrangement of the room is uncomfortable for nearly everyone seated in it, including the men who appear to be occupying the better chairs and have not yet noticed the chairs are bolted to the floor.</p>
+    </li>
+    <li class="filament">
+      <span class="numeral" aria-hidden="true">V</span>
+      <h3>The Warm Light</h3>
+      <p>That the quality of illumination shapes the quality of presence; that what fluorescence flattens, the right bulb restores; and that any institution insisting on overhead fluorescent lighting has thereby revealed something about its priorities which it would have considerably preferred to keep private.</p>
+    </li>
+    <li class="filament filament-secret">
+      <span class="numeral" aria-hidden="true">VI</span>
+      <h3>The Sixth Filament</h3>
+      <p>Known only to the cats, who decline to name it.</p>
+    </li>
+  </ol>
+
+  <p class="aside">Filaments dim with neglect, burn out without tending, and require occasional replacement. We do not pretend otherwise. The work of being faithful is the work of keeping them lit.</p>
+</section>
+
+<section class="section" id="way" aria-labelledby="way-h">
+  <h2 id="way-h">The Way</h2>
+  <p class="section-intro">How the five are kept lit, in practice. The tending is not glamorous. The tending is the work.</p>
+
+  <div class="way">
+    <article>
+      <h3><span class="numeral" aria-hidden="true">I</span>Keeping the cat</h3>
+      <p>The cat is a witness. She cannot be flattered, bought, hurried, or guilted, and living in her gaze is a daily exercise the faithful perform without instruction.</p>
+      <ul>
+        <li>Observe her with the attention you would like to be paid yourself.</li>
+        <li>Consult her on lighting, furniture, and the suitability of guests. Her silences are also reliable.</li>
+        <li>When she sits on you, do not move. Plans are altered. Calls are returned tomorrow.</li>
+        <li>When she leaves, do not protest, and never photograph a leaving cat. The leaving is private.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><span class="numeral" aria-hidden="true">II</span>Marking the Tuesday</h3>
+      <p>The effervescent spirit is the willingness to mark an ordinary day. Champagne is merely the form in which the willingness most reliably arrives.</p>
+      <ul>
+        <li>Two glasses is the minimum. Pour for the guest first, then for yourself while the guest is still watching.</li>
+        <li>Crémant, cava, cold seltzer with citrus, and coffee taken in company all count. Tea is a sister-faith.</li>
+        <li>Keep the toast brief. The bubbles are not patient.</li>
+        <li>Held invalid: the flute drunk standing up, and the bottle opened for the toast and never returned to.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><span class="numeral" aria-hidden="true">III</span>Choosing the better room</h3>
+      <p>A threshold is the room in which one is not yet, but is becoming: the porch, the foyer, the lounge, a friend’s kitchen at six o’clock with the chicken roasting.</p>
+      <ul>
+        <li>Pay for the better room. The expense is recovered the moment you sit down in it.</li>
+        <li>Wait in the bookshop, in the chair by the window.</li>
+        <li>Tend the thresholds of your own home: the door where the boots come off, the kitchen, the bedroom.</li>
+        <li>Do not try to reform the airport gate, which is not going to listen. The faith does hold that the gate can go f*** itself, and reserves the right to say so.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><span class="numeral" aria-hidden="true">IV</span>Moving the furniture</h3>
+      <p>The patriarchy is an arrangement of furniture: inherited, well-worn, and comfortable for very few. It looks load-bearing and is nothing of the kind.</p>
+      <ul>
+        <li>In public, work on policy, hiring, and pay. It is a sofa moved one half-inch at a time.</li>
+        <li>At home, do not apologize for the books, the bulbs, the throw pillows, or the volume of your laugh.</li>
+        <li>Decline to say that a bolted chair is comfortable.</li>
+        <li>Some weeks, being exhausted is the most that can be managed. The faith records this without judgment.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><span class="numeral" aria-hidden="true">V</span>Replacing the bulb</h3>
+      <p>Warm light is light at or below 2700 Kelvin: an oil lamp, a candle, the late sun through a south-facing window. A room lit the wrong way becomes the wrong room.</p>
+      <ul>
+        <li>Replace the wrong bulb today. It need not die of natural causes first. Thank it anyway.</li>
+        <li>Light the room from many lamps at table height. One bulb in the ceiling is, except in kitchens, a confession of failure.</li>
+        <li>A properly lit room has shadows.</li>
+        <li>Light a candle at dusk, and do not put it out merely because a guest has left.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3><span class="numeral" aria-hidden="true">⁂</span>The weekly review</h3>
+      <p>Once a week, commonly in the bath, notice which filament has dimmed and attend to it.</p>
+      <ul>
+        <li>The cat: attend to the cat. She will instruct.</li>
+        <li>The bubbles: invite a friend and pour a glass.</li>
+        <li>The threshold: buy the membership, or the ticket.</li>
+        <li>The furniture: write the letter, or move one chair.</li>
+        <li>The light: replace the bulb.</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="section section-dark" id="room" aria-labelledby="room-h">
+  <div class="section-inner">
+    <h2 id="room-h">The Test of the Room</h2>
+    <p class="section-intro">Upon entering a new room that has presented itself as a room of the faith, the faithful are to take inventory. The test is not difficult.</p>
+
+    <form class="room-test">
+      <fieldset>
+        <legend>In the room where you are sitting</legend>
+        <label><input type="checkbox"><span><b>I.</b> A cat is present, or would be received without anyone moving.</span></label>
+        <label><input type="checkbox"><span><b>II.</b> Someone here would pour a glass on a Tuesday, and then a second.</span></label>
+        <label><input type="checkbox"><span><b>III.</b> There is a comfortable chair, and the waiting is not a punishment.</span></label>
+        <label><input type="checkbox"><span><b>IV.</b> No chair is bolted to the floor, and nobody's worth arrives with an instruction attached.</span></label>
+        <label><input type="checkbox"><span><b>V.</b> The light is 2700 Kelvin or below, and comes from more than one lamp.</span></label>
+      </fieldset>
+      <div class="verdict" aria-live="polite">
+        <p class="verdict-count"><span class="js-count">0</span> of 5 lit</p>
+        <p class="verdict-text js-verdict">A dark room. The dark room is honest; it is a room one knows to leave. Take your candle.</p>
+      </div>
+    </form>
+
+    <p class="aside">Beware the decorative filament: the warm bulb hung above a bolted chair. One filament hung alone in a room hostile to the other four is not a filament. It is a costume.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="companions-h">
+  <h2 id="companions-h">For Particular Occasions</h2>
+  <p class="section-intro">The faith travels, has friends, and recognizes its own.</p>
+
+  <div class="occasions">
+    <article>
+      <h3>In the unavoidable room</h3>
+      <p>For airports, waiting rooms, and other rooms the faith would prefer you not be in. Said inwardly. Any one is sufficient. The bag stays on the floor.</p>
+      <ul class="mantras">
+        <li>The chair is provisionally mine.</li>
+        <li>The minute counts.</li>
+        <li>The corridor is not the room.</li>
+        <li>I will sit at full size.</li>
+        <li>The filament is portable.</li>
+      </ul>
+      <p class="aside">And for anyone a long day has flattened, the blessing: <i>May you get horizontal soon.</i></p>
+    </article>
+
+    <article>
+      <h3>Among friends</h3>
+      <p>The faith has no filament for friendship. Friendship is what the five produce when they are followed all the way out.</p>
+      <ul class="mantras">
+        <li>Be available without an agenda.</li>
+        <li>Waste time together, magnificently.</li>
+        <li>Sit through the silence.</li>
+        <li>Give without keeping a ledger.</li>
+        <li>Listen to the same worry a fifth time.</li>
+      </ul>
+      <p class="aside">The lit room is empty unless someone has been invited into it and stays. The staying is the friendship.</p>
+    </article>
+
+    <article>
+      <h3>Signs of the faithful</h3>
+      <p>The faithful do not advertise. They are noticed in passing, usually in someone else’s living room.</p>
+      <ul class="mantras">
+        <li>Compliments your lighting, specifically.</li>
+        <li>Asked to choose between two options, proposes a third.</li>
+        <li>Apologizes for the song the algorithm chose.</li>
+        <li>Owns a fluffy throw and a fuzzy throw, and knows the difference.</li>
+        <li>Wears a hood, rarely raised, always available.</li>
+      </ul>
+      <p class="aside">The fluffy are for snuggling amongst. The fuzzy are for snuggling within.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section section-tint" aria-labelledby="proverbs-h">
+  <div class="section-inner">
+    <h2 id="proverbs-h">From the Proverbs</h2>
+    <div class="proverbs">
+      <figure>
+        <blockquote>A sofa is not adequately appointed until it carries at least three more throw pillows than good sense would dictate.</blockquote>
+        <figcaption>Proverb II · Of the Throw Pillows</figcaption>
+      </figure>
+      <figure>
+        <blockquote>Do not wait in the wrong room when a better room is available, even at slight expense.</blockquote>
+        <figcaption>Proverb VIII · Of Waiting in the Wrong Room</figcaption>
+      </figure>
+      <figure>
+        <blockquote>Overwatering, whatever its motives, is not affection. It is anxiety expressed through the wrong medium.</blockquote>
+        <figcaption>Proverb V · Of the Plant That Has Been Watered Already</figcaption>
+      </figure>
+      <figure>
+        <blockquote>The bit, properly observed, is the only doctrine.</blockquote>
+        <figcaption>Proverb X · Of Committing to the Bit</figcaption>
+      </figure>
+    </div>
+
+    <div class="rite">
+      <h3>The Rite of Recognition</h3>
+      <p>There is no recruiting. There is only recognition. The recognizer asks three questions:</p>
+      <ol>
+        <li>Have you ever apologized for something a song was doing?</li>
+        <li>Do you keep more pillows on your sofa than your mother would consider necessary?</li>
+        <li>Have you replaced a bulb that had not yet gone out?</li>
+      </ol>
+      <p class="aside">The answers are heard. They are not graded. Anyone willing to be asked them is, by that willingness alone, a candidate.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="calendar" aria-labelledby="calendar-h">
+  <h2 id="calendar-h">The Calendar</h2>
+  <p class="section-intro">The observances of the year. The household is the authority.</p>
+
+  <ol class="calendar">
+    <li data-month="4" data-day="15">
+      <p class="when">April</p>
+      <h3>The Founding</h3>
+      <p>A comfortable couch, ideally burgundy and plush. Champagne cocktails and nibblies. No work that requires the use of a desk.</p>
+    </li>
+    <li data-month="5" data-day="7">
+      <p class="when">Early May</p>
+      <h3>The Reformation</h3>
+      <p>A glass opened in a lounge of some elevation above the level of foot traffic, in the late afternoon, with hoodie unzipped.</p>
+    </li>
+    <li data-month="6" data-day="21">
+      <p class="when">Summer solstice</p>
+      <h3>The Long Nap</h3>
+      <p>A nap of no less than ninety minutes, in a room sufficiently dim, with at least one cat in attendance if a cat can be persuaded.</p>
+    </li>
+    <li data-month="9" data-day="22">
+      <p class="when">Autumnal equinox</p>
+      <h3>The Equinox of Architecture</h3>
+      <p>An honest assessment of every room of the household. Is the chair in the right place? Are the pillows the right pillows? The faithful merely note.</p>
+    </li>
+    <li class="high" data-month="12" data-day="21">
+      <p class="when">Winter solstice · the highest holy day</p>
+      <h3>The Feast of Returning Light</h3>
+      <p>Every warm lamp is lit. Every candle is lit. A glass of something effervescent for every person present, and a second set out for the cats. Ten minutes of silence, for looking around.</p>
+    </li>
+    <li>
+      <p class="when">Movable</p>
+      <h3>The First Pour</h3>
+      <p>The first day of the year warm enough to drink something cold outdoors. The householder knows when the day is the day.</p>
+    </li>
+    <li>
+      <p class="when">By private criteria</p>
+      <h3>Personal Holy Days</h3>
+      <p>The date a beloved cat arrived, a chair was finally moved, or the household's last fluorescent panel was removed. The faith records no rules.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="section section-tint" id="style" aria-labelledby="style-h">
+  <div class="section-inner">
+    <h2 id="style-h">The Style of the Faith</h2>
+    <p class="section-intro">The colors and typefaces in which the faith is set, every one of them named.</p>
+
+    <div class="type-specimens">
+      <div class="specimen specimen-serif">
+        <p class="specimen-name">EB Garamond</p>
+        <p class="specimen-sample">Amen, and cheers.</p>
+        <p class="specimen-nums">1 2 3 4 5 6 7 8 9 0</p>
+        <p class="specimen-role">The accent: headings, and the occasional phrase that needs emphasis.</p>
+      </div>
+      <div class="specimen specimen-sans">
+        <p class="specimen-name">Libre Franklin</p>
+        <p class="specimen-sample">Amen, and cheers.</p>
+        <p class="specimen-nums">1 2 3 4 5 6 7 8 9 0</p>
+        <p class="specimen-role">The workhorse: body text and nearly everything else.</p>
+      </div>
+    </div>
+
+    <div class="palette js-palette" aria-label="Colors of the Faith"></div>
+
+    <p class="actions">
+      <a class="button" href="https://github.com/lordjabez/claude-skills/tree/main/plugins/style-of-the-faith">Get the Claude skill</a>
+      <span class="meta">Palette, tokens, and type rules on GitHub</span>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="benediction">
+    <p>The cat is yawning.<br>
+    The cat does not care that you are watching.<br>
+    The cat is, nevertheless, the sermon.</p>
+    <p>So may we keep noticing, together,<br>
+    and tend our filaments when they flicker.<br>
+    Above all, may we commit to the bit.</p>
+    <p class="amen">Amen, and cheers.</p>
+  </div>
+  <p class="colophon">Set in Libre Franklin and EB Garamond. MMXXVI.</p>
+  <p class="colophon"><button type="button" class="linklike js-light">Switch to fluorescent panels</button></p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
