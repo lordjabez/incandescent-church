@@ -3,11 +3,12 @@
 // 1. The light: warm by default, fluorescent on request (and regretted).
 const root = document.documentElement;
 const notice = document.querySelector('.panel-notice');
+const nav = document.querySelector('.nav');
 for (const control of document.querySelectorAll('.js-light')) {
   control.addEventListener('click', () => {
     const fluorescent = root.classList.toggle('fluorescent');
+    notice.style.minHeight = `${nav.offsetHeight}px`;
     notice.hidden = !fluorescent;
-    if (fluorescent) window.scrollTo({ top: 0 });
   });
 }
 
